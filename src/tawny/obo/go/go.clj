@@ -1,5 +1,6 @@
 
 
+
 (ns tawny.obo.go.go
   (:refer-clojure :only [partial])
   (:require [tawny.owl]
@@ -7,7 +8,6 @@
             [tawny.memorise])
   (:import (java.io File)
            (org.semanticweb.owlapi.model IRI OWLNamedObject)))
-
 
 (tawny.read/defread go
   ;; something that the OWL API can interpret. This includes a stream, so
@@ -25,5 +25,12 @@
   :transform
   tawny.read/exception-nil-label-transform
   )
+
+
+;; (clojure.core/require 'clojure.repl)
+;; (clojure.core/require 'tawny.repl)
+;; (clojure.repl/doc molecular_function)
+;; (clojure.repl/doc trans-hexaprenyltranstransferase_activity)
+;; (clojure.repl/doc alpha-glucoside_transport)
 
 
